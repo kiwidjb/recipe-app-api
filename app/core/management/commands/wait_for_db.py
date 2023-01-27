@@ -1,5 +1,5 @@
 """
-Django commonad to wait for the database to be available.
+Django command to wait for the database to be available.
 """
 import time
 
