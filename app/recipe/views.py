@@ -1,6 +1,12 @@
 """
 Views for the recipe APIs
 """
+from drf_spectacular.utils import (
+    extend_schema_view,
+    extend_schema,
+    OpenApiParameter,
+    OpenApiTypes,
+)
 from rest_framework import (
     viewsets,
     mixins,
@@ -75,7 +81,7 @@ class TagViewSet(BaseRecipeAttrViewSet):
     queryset = Tag.objects.all()
 
 
-class IngrediantViewSet(BaseRecipeAttrViewSet):
-    """Manage tags in the database"""
+class IngredientViewSet(BaseRecipeAttrViewSet):
+    """Manage ingredients in the database"""
     serializer_class = serializers.IngredientSerializer
     queryset = Ingredient.objects.all()
